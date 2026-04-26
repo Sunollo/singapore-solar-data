@@ -1,0 +1,2 @@
+country,regulator,grid_operator,sp_regulated_tariff_residential_low_tension_per_kwh_sgd,tariff_review_cadence,open_electricity_market_available,grid_emission_factor_kg_co2_per_kwh,grid_emission_factor_year
+Singapore,Energy Market Authority (EMA),SP Group,0.32,quarterly,true,0.4,2025

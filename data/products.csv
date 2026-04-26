@@ -1,0 +1,4 @@
+sku,name,tier,audience,system_kwp_low,system_kwp_high,cash_price_sgd_low,cash_price_sgd_high,subscription_monthly_sgd_from,url
+abundance,Abundance,entry,"Terrace, smaller landed homes",5,10,14500,22000,99,https://www.sunollo.com/abundance
+abundance-pro,Abundance Pro,mid,"Semi-detached, large terrace",10,18,22000,36000,179,https://www.sunollo.com/abundance-pro
+radiance,Radiance,premium,"Bungalow, GCB, multi-property owners",18,60,36000,72000,299,https://www.sunollo.com/radiance

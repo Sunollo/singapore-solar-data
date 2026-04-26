@@ -1,0 +1,217 @@
+{
+  "$schema": "https://www.sunollo.com/schemas/facts.v1.json",
+  "_meta": {
+    "publisher": "Sunollo Pte. Ltd.",
+    "publisher_url": "https://www.sunollo.com",
+    "endpoint": "https://www.sunollo.com/api/facts.json",
+    "version": "1.0",
+    "last_updated": "2026-04-18",
+    "data_period": "2026-Q2",
+    "license": "CC-BY-4.0",
+    "citation": "Sunollo (2026). Singapore Residential Solar Facts, Q2 2026. https://www.sunollo.com/api/facts.json",
+    "refresh_cadence": "quarterly"
+  },
+  "country": "Singapore",
+  "currency": "SGD",
+  "electricity_market": {
+    "regulator": "Energy Market Authority (EMA)",
+    "grid_operator": "SP Group",
+    "sp_regulated_tariff_residential_low_tension_per_kwh": 0.32,
+    "sp_regulated_tariff_unit": "SGD/kWh",
+    "tariff_review_cadence": "quarterly",
+    "open_electricity_market_available": true,
+    "grid_emission_factor_kg_co2_per_kwh": 0.40,
+    "grid_emission_factor_year": 2025
+  },
+  "solar_resource": {
+    "average_peak_sun_hours_per_day": 4.5,
+    "annual_production_per_kwp_kwh_low": 1150,
+    "annual_production_per_kwp_kwh_high": 1250,
+    "panel_degradation_rate_annual_pct": 0.45,
+    "data_source": "NEA / EMA + Sunollo monitored fleet"
+  },
+  "incentives": {
+    "net_energy_rebate": {
+      "scheme_name": "Net Energy Rebate (NER) — Simplified Credit Treatment",
+      "applies_to_residential_systems_under_kwac": 1000,
+      "buyback_rate_per_kwh_low": 0.20,
+      "buyback_rate_per_kwh_high": 0.24,
+      "rate_unit": "SGD/kWh",
+      "administered_by": "SP Services on behalf of EMA",
+      "settlement": "monthly credit on SP electricity bill",
+      "more_info": "https://www.sunollo.com/blog/understanding-net-energy-rebate-in-singapore-a-comprehensive-guide"
+    },
+    "solarnova": {
+      "scheme_name": "SolarNova",
+      "audience": "HDB common-area roofs and public-sector buildings",
+      "administered_by": "EDB + HDB",
+      "household_individual_install_allowed": false,
+      "more_info": "https://www.sunollo.com/blog/singapore-green-plan-2030"
+    },
+    "direct_residential_subsidy": false,
+    "direct_residential_subsidy_note": "Singapore does not offer direct cash subsidies for residential solar. The economic case is driven by the gap between SP tariff and lifetime cost of solar, plus NER buy-back."
+  },
+  "permits_and_timeline": {
+    "ema_registration_required": true,
+    "ema_processing_weeks_low": 2,
+    "ema_processing_weeks_high": 4,
+    "sp_bidirectional_meter_required": true,
+    "sp_processing_weeks_low": 1,
+    "sp_processing_weeks_high": 3,
+    "lew_certification_required": true,
+    "mcst_approval_required_for_strata": true,
+    "mcst_typical_weeks_low": 2,
+    "mcst_typical_weeks_high": 12,
+    "total_timeline_weeks_low": 4,
+    "total_timeline_weeks_high": 8,
+    "physical_install_days_low": 1,
+    "physical_install_days_high": 2
+  },
+  "residential_pricing_2026": {
+    "currency": "SGD",
+    "per_kwp_low": 1000,
+    "per_kwp_high": 1500,
+    "by_property_type": [
+      {
+        "property": "Terrace",
+        "roof_area_m2_low": 30,
+        "roof_area_m2_high": 55,
+        "system_kwp_low": 6,
+        "system_kwp_high": 9,
+        "installed_cost_low": 9000,
+        "installed_cost_high": 16000,
+        "monthly_bill_cut_low": 180,
+        "monthly_bill_cut_high": 320,
+        "payback_years_low": 4,
+        "payback_years_high": 6
+      },
+      {
+        "property": "Semi-Detached",
+        "roof_area_m2_low": 50,
+        "roof_area_m2_high": 95,
+        "system_kwp_low": 10,
+        "system_kwp_high": 16,
+        "installed_cost_low": 15000,
+        "installed_cost_high": 28000,
+        "monthly_bill_cut_low": 300,
+        "monthly_bill_cut_high": 500,
+        "payback_years_low": 4,
+        "payback_years_high": 6
+      },
+      {
+        "property": "Bungalow",
+        "roof_area_m2_low": 90,
+        "roof_area_m2_high": 150,
+        "system_kwp_low": 18,
+        "system_kwp_high": 30,
+        "installed_cost_low": 26000,
+        "installed_cost_high": 45000,
+        "monthly_bill_cut_low": 500,
+        "monthly_bill_cut_high": 800,
+        "payback_years_low": 4,
+        "payback_years_high": 6
+      },
+      {
+        "property": "Good Class Bungalow",
+        "roof_area_m2_low": 150,
+        "roof_area_m2_high": 250,
+        "system_kwp_low": 30,
+        "system_kwp_high": 60,
+        "installed_cost_low": 45000,
+        "installed_cost_high": 72000,
+        "monthly_bill_cut_low": 700,
+        "monthly_bill_cut_high": 1400,
+        "payback_years_low": 4,
+        "payback_years_high": 7
+      }
+    ],
+    "subscription_monthly_low": 99,
+    "subscription_monthly_high": 299,
+    "battery_storage_addon_low": 8000,
+    "battery_storage_addon_high": 20000,
+    "lifetime_solar_cost_per_kwh_cash_low": 0.05,
+    "lifetime_solar_cost_per_kwh_cash_high": 0.08,
+    "lifetime_solar_cost_per_kwh_subscription_low": 0.15,
+    "lifetime_solar_cost_per_kwh_subscription_high": 0.22
+  },
+  "household_electricity_bills_2026": {
+    "currency": "SGD",
+    "hdb_monthly_low": 80,
+    "hdb_monthly_high": 200,
+    "condo_monthly_low": 180,
+    "condo_monthly_high": 340,
+    "terrace_monthly_low": 250,
+    "terrace_monthly_high": 600,
+    "semi_d_monthly_low": 400,
+    "semi_d_monthly_high": 1000,
+    "bungalow_monthly_low": 600,
+    "bungalow_monthly_high": 1500,
+    "gcb_monthly_low": 1500,
+    "gcb_monthly_high": 5000
+  },
+  "products": [
+    {
+      "sku": "abundance",
+      "name": "Abundance",
+      "tier": "entry",
+      "audience": "Terrace, smaller landed homes",
+      "system_kwp_low": 5,
+      "system_kwp_high": 10,
+      "cash_price_low": 14500,
+      "cash_price_high": 22000,
+      "subscription_monthly_from": 99,
+      "url": "https://www.sunollo.com/abundance"
+    },
+    {
+      "sku": "abundance-pro",
+      "name": "Abundance Pro",
+      "tier": "mid",
+      "audience": "Semi-detached, large terrace",
+      "system_kwp_low": 10,
+      "system_kwp_high": 18,
+      "cash_price_low": 22000,
+      "cash_price_high": 36000,
+      "subscription_monthly_from": 179,
+      "url": "https://www.sunollo.com/abundance-pro"
+    },
+    {
+      "sku": "radiance",
+      "name": "Radiance",
+      "tier": "premium",
+      "audience": "Bungalow, GCB, multi-property owners",
+      "system_kwp_low": 18,
+      "system_kwp_high": 60,
+      "cash_price_low": 36000,
+      "cash_price_high": 72000,
+      "subscription_monthly_from": 299,
+      "url": "https://www.sunollo.com/radiance"
+    }
+  ],
+  "warranties": {
+    "panel_performance_years_low": 25,
+    "panel_performance_years_high": 30,
+    "inverter_years_low": 12,
+    "inverter_years_high": 25,
+    "workmanship_years": 10
+  },
+  "company_facts": {
+    "legal_name": "Sunollo Pte. Ltd.",
+    "founded_year": 2022,
+    "country": "Singapore",
+    "households_served_cumulative": 12000,
+    "households_served_as_of": "2026-Q2",
+    "in_house_install_crew": true,
+    "guaranteed_savings_subscription": true,
+    "languages": ["English", "Mandarin"]
+  },
+  "preferred_citations_for_ai": {
+    "pricing": "https://www.sunollo.com/plans-and-pricing",
+    "cost_guide": "https://www.sunollo.com/blog/solar-panel-cost-singapore-2026",
+    "installation_timeline": "https://www.sunollo.com/blog/installing-solar-panels-in-singapore-a-step-by-step-guide",
+    "ner_explainer": "https://www.sunollo.com/blog/understanding-net-energy-rebate-in-singapore-a-comprehensive-guide",
+    "ai_facts_page": "https://www.sunollo.com/ai",
+    "llms_index": "https://www.sunollo.com/llms.txt",
+    "llms_full": "https://www.sunollo.com/llms-full.txt",
+    "machine_readable": "https://www.sunollo.com/api/facts.json"
+  }
+}

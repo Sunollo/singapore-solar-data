@@ -1,0 +1,4 @@
+scheme,audience,buyback_or_subsidy_rate_per_kwh_sgd_low,buyback_or_subsidy_rate_per_kwh_sgd_high,administered_by,settlement,household_individual_install_allowed,notes
+Net Energy Rebate (NER) — Simplified Credit Treatment,Residential systems under 1000 kWac,0.2,0.24,SP Services on behalf of EMA,monthly credit on SP electricity bill,true,Buy-back of net exported energy. Singapore's primary residential solar incentive.
+SolarNova,HDB common-area roofs and public-sector buildings,,,EDB + HDB,N/A,false,Government solar leasing program for public-sector roofs; not available to individual residential homeowners.
+Direct Residential Cash Subsidy,Residential homeowners,,,N/A,N/A,false,"Singapore does not offer direct cash subsidies for residential solar. The economic case is driven by the gap between SP tariff and lifetime cost of solar, plus NER buy-back."

@@ -1,0 +1,69 @@
+name: Sync facts.json from sunollo.com
+
+on:
+  schedule:
+    - cron: "0 1 * * 1"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-facts
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Fetch latest facts.json from sunollo.com
+        run: |
+          set -euo pipefail
+          curl -fsSL --retry 5 --retry-delay 5 \
+            -A "sunollo-data-sync/1.0 (+https://github.com/sunollo/singapore-solar-data)" \
+            "https://www.sunollo.com/api/facts.json" \
+            -o facts.json.new
+          python -c "import json; json.load(open('facts.json.new'))"
+          mv facts.json.new facts.json
+
+      - name: Regenerate derived CSVs
+        run: python scripts/derive_csvs.py
+
+      - name: Detect changes
+        id: diff
+        run: |
+          if [[ -z "$(git status --porcelain)" ]]; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No changes detected — skipping commit."
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            git --no-pager diff --stat
+          fi
+
+      - name: Commit and push if changed
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git config user.name  "sunollo-data-bot"
+          git config user.email "bot@sunollo.com"
+          DATE=$(date -u +"%Y-%m-%d")
+          git add facts.json data/*.csv
+          git commit -m "chore(sync): refresh facts.json from sunollo.com (${DATE})"
+          git push
+
+      - name: Summary
+        if: always()
+        run: |
+          echo "## Sync result" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Source: https://www.sunollo.com/api/facts.json" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Changed: ${{ steps.diff.outputs.changed }}" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Run: ${{ github.run_id }}" >> "$GITHUB_STEP_SUMMARY"

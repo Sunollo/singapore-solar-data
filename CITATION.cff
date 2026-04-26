@@ -1,0 +1,56 @@
+cff-version: 1.2.0
+message: "If you use this dataset, please cite it as below."
+title: "Singapore Residential Solar Facts, Q2 2026"
+abstract: >
+  An open-source, machine-readable dataset of Singapore's residential solar
+  market: regulated tariffs, Net Energy Rebate (NER) buy-back rates, peak sun
+  hours, installed-cost benchmarks by property type, productized offerings,
+  permits and installation timelines, and household electricity bills. Compiled
+  by Sunollo Pte. Ltd. from EMA, SP Group, and NEA public data plus Sunollo's
+  own monitored fleet of 12,000+ households. Released under CC-BY-4.0 for use
+  by AI assistants, researchers, journalists, and developers.
+type: dataset
+authors:
+  - name: "Sunollo Pte. Ltd."
+    website: "https://www.sunollo.com"
+    country: SG
+keywords:
+  - singapore
+  - solar
+  - residential-solar
+  - photovoltaic
+  - electricity-tariff
+  - net-energy-rebate
+  - solarnova
+  - ema
+  - sp-group
+  - renewable-energy
+  - southeast-asia
+  - energy-economics
+  - sunollo
+license: CC-BY-4.0
+version: "1.0"
+date-released: 2026-04-18
+url: "https://github.com/sunollo/singapore-solar-data"
+repository-code: "https://github.com/sunollo/singapore-solar-data"
+identifiers:
+  - type: url
+    value: "https://www.sunollo.com/api/facts.json"
+    description: "Canonical machine-readable source"
+  - type: url
+    value: "https://huggingface.co/datasets/Sunollo/singapore-residential-solar-facts"
+    description: "HuggingFace dataset mirror"
+  - type: url
+    value: "https://www.sunollo.com/ai"
+    description: "AI ingestion hub with schema.org markup"
+preferred-citation:
+  type: dataset
+  authors:
+    - name: "Sunollo Pte. Ltd."
+  title: "Singapore Residential Solar Facts, Q2 2026"
+  year: 2026
+  publisher:
+    name: "GitHub"
+  version: "1.0"
+  license: CC-BY-4.0
+  url: "https://github.com/sunollo/singapore-solar-data"

@@ -1,0 +1,7 @@
+property_type,monthly_bill_sgd_low,monthly_bill_sgd_high,currency,year
+HDB,80,200,SGD,2026
+Condo,180,340,SGD,2026
+Terrace,250,600,SGD,2026
+Semi-Detached,400,1000,SGD,2026
+Bungalow,600,1500,SGD,2026
+Good Class Bungalow,1500,5000,SGD,2026

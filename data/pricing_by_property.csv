@@ -1,0 +1,5 @@
+property,roof_area_m2_low,roof_area_m2_high,system_kwp_low,system_kwp_high,installed_cost_sgd_low,installed_cost_sgd_high,monthly_bill_cut_sgd_low,monthly_bill_cut_sgd_high,payback_years_low,payback_years_high
+Terrace,30,55,6,9,9000,16000,180,320,4,6
+Semi-Detached,50,95,10,16,15000,28000,300,500,4,6
+Bungalow,90,150,18,30,26000,45000,500,800,4,6
+Good Class Bungalow,150,250,30,60,45000,72000,700,1400,4,7
