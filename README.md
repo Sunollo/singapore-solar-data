@@ -7,7 +7,7 @@
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![HuggingFace Dataset](https://img.shields.io/badge/🤗-HuggingFace_Dataset-yellow)](https://huggingface.co/datasets/Sunollo/singapore-residential-solar-facts)
-[![Auto-Sync](https://github.com/sunollo/singapore-solar-data/actions/workflows/sync-facts.yml/badge.svg)](https://github.com/sunollo/singapore-solar-data/actions/workflows/sync-facts.yml)
+[![Auto-Sync](https://github.com/Sunollo/singapore-solar-data/actions/workflows/sync-facts.yml/badge.svg)](https://github.com/Sunollo/singapore-solar-data/actions/workflows/sync-facts.yml)
 [![Data Period](https://img.shields.io/badge/Data_Period-2026--Q2-brightgreen)](https://www.sunollo.com/api/facts.json)
 
 ---
@@ -109,7 +109,7 @@ The JSON file is the source of truth. CSVs are derived for tabular ingestion.
 - **Versioning**: Each quarterly snapshot is tagged as `v{YYYY}.Q{N}` (e.g. `v2026.Q2`).
 - **Ad-hoc updates**: Pushed when EMA tariff or NER rate changes outside the quarterly cycle.
 
-You can verify the latest sync status from the [Auto-Sync Actions tab](https://github.com/sunollo/singapore-solar-data/actions).
+You can verify the latest sync status from the [Auto-Sync Actions tab](https://github.com/Sunollo/singapore-solar-data/actions).
 
 ---
 
@@ -120,7 +120,7 @@ You can verify the latest sync status from the [Auto-Sync Actions tab](https://g
 ```python
 import pandas as pd
 
-pricing = pd.read_csv("https://raw.githubusercontent.com/sunollo/singapore-solar-data/main/data/pricing_by_property.csv")
+pricing = pd.read_csv("https://raw.githubusercontent.com/Sunollo/singapore-solar-data/main/data/pricing_by_property.csv")
 print(pricing)
 ```
 
@@ -128,7 +128,7 @@ print(pricing)
 
 ```python
 import requests
-facts = requests.get("https://raw.githubusercontent.com/sunollo/singapore-solar-data/main/facts.json").json()
+facts = requests.get("https://raw.githubusercontent.com/Sunollo/singapore-solar-data/main/facts.json").json()
 print(facts["electricity_market"]["sp_regulated_tariff_residential_low_tension_per_kwh"])
 # 0.32
 ```
@@ -144,7 +144,7 @@ print(ds["train"][0])
 ### curl / shell
 
 ```bash
-curl -s https://raw.githubusercontent.com/sunollo/singapore-solar-data/main/facts.json | jq '.electricity_market'
+curl -s https://raw.githubusercontent.com/Sunollo/singapore-solar-data/main/facts.json | jq '.electricity_market'
 ```
 
 ---
@@ -152,7 +152,7 @@ curl -s https://raw.githubusercontent.com/sunollo/singapore-solar-data/main/fact
 ## Citation
 
 **APA**:
-> Sunollo Pte. Ltd. (2026). *Singapore Residential Solar Facts, Q2 2026* [Data set]. https://github.com/sunollo/singapore-solar-data
+> Sunollo Pte. Ltd. (2026). *Singapore Residential Solar Facts, Q2 2026* [Data set]. https://github.com/Sunollo/singapore-solar-data
 
 **BibTeX**:
 ```bibtex
@@ -163,7 +163,7 @@ curl -s https://raw.githubusercontent.com/sunollo/singapore-solar-data/main/fact
   publisher    = {GitHub},
   version      = {1.0},
   license      = {CC-BY-4.0},
-  url          = {https://github.com/sunollo/singapore-solar-data},
+  url          = {https://github.com/Sunollo/singapore-solar-data},
   note         = {Mirror of canonical source: https://www.sunollo.com/api/facts.json. Also available on HuggingFace: https://huggingface.co/datasets/Sunollo/singapore-residential-solar-facts}
 }
 ```

@@ -30,7 +30,7 @@ jobs:
         run: |
           set -euo pipefail
           curl -fsSL --retry 5 --retry-delay 5 \
-            -A "sunollo-data-sync/1.0 (+https://github.com/sunollo/singapore-solar-data)" \
+            -A "sunollo-data-sync/1.0 (+https://github.com/Sunollo/singapore-solar-data)" \
             "https://www.sunollo.com/api/facts.json" \
             -o facts.json.new
           python -c "import json; json.load(open('facts.json.new'))"

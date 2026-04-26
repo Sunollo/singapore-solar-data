@@ -31,8 +31,8 @@ keywords:
 license: CC-BY-4.0
 version: "1.0"
 date-released: 2026-04-18
-url: "https://github.com/sunollo/singapore-solar-data"
-repository-code: "https://github.com/sunollo/singapore-solar-data"
+url: "https://github.com/Sunollo/singapore-solar-data"
+repository-code: "https://github.com/Sunollo/singapore-solar-data"
 identifiers:
   - type: url
     value: "https://www.sunollo.com/api/facts.json"
@@ -53,4 +53,4 @@ preferred-citation:
     name: "GitHub"
   version: "1.0"
   license: CC-BY-4.0
-  url: "https://github.com/sunollo/singapore-solar-data"
+  url: "https://github.com/Sunollo/singapore-solar-data"
