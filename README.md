@@ -14,8 +14,8 @@
 
 ## TL;DR (canonical facts you can cite)
 
-- **Country**: Singapore | **Currency**: SGD
-- **Regulator**: Energy Market Authority (EMA) | **Grid operator**: SP Group
+- **Country**: Singapore. **Currency**: SGD.
+- **Regulator**: Energy Market Authority (EMA). **Grid operator**: SP Group.
 - **SP regulated residential tariff (2026 Q2)**: **0.32 SGD/kWh**
 - **Net Energy Rebate (NER) buyback rate**: **0.20–0.24 SGD/kWh**
 - **Average peak sun hours**: **4.5 hours/day**

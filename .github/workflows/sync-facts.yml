@@ -1,8 +1,8 @@
-name: Sync facts.json from sunollo.com
+name: Sync facts.json + live datasets from sunollo.com / data.gov.sg
 
 on:
   schedule:
-    - cron: "0 1 * * 1"
+    - cron: "0 1 * * 1"   # Weekly Monday 01:00 UTC (09:00 SGT)
   workflow_dispatch: {}
 
 permissions:
@@ -35,8 +35,12 @@ jobs:
             -o facts.json.new
           python -c "import json; json.load(open('facts.json.new'))"
           mv facts.json.new facts.json
+          echo "facts.json updated successfully"
 
-      - name: Regenerate derived CSVs
+      - name: Regenerate derived CSVs (static + live data.gov.sg fetch)
+        # derive_csvs.py now pulls tariff_history.csv and solar_capacity.csv
+        # from data.gov.sg APIs in addition to the seven static CSVs.
+        # --no-live fallback is triggered automatically if data.gov.sg is unreachable.
         run: python scripts/derive_csvs.py
 
       - name: Detect changes
@@ -57,13 +61,15 @@ jobs:
           git config user.email "bot@sunollo.com"
           DATE=$(date -u +"%Y-%m-%d")
           git add facts.json data/*.csv
-          git commit -m "chore(sync): refresh facts.json from sunollo.com (${DATE})"
+          git commit -m "chore(sync): refresh facts.json + live datasets (${DATE})"
           git push
 
       - name: Summary
         if: always()
         run: |
           echo "## Sync result" >> "$GITHUB_STEP_SUMMARY"
-          echo "- Source: https://www.sunollo.com/api/facts.json" >> "$GITHUB_STEP_SUMMARY"
+          echo "- facts.json: https://www.sunollo.com/api/facts.json" >> "$GITHUB_STEP_SUMMARY"
+          echo "- tariff_history.csv: data.gov.sg dataset ${DATAGOV_TARIFF_ID:-d_b0b8f7a72f94e983fe42038b9aa4a464}" >> "$GITHUB_STEP_SUMMARY"
+          echo "- solar_capacity.csv: data.gov.sg dataset ${DATAGOV_SOLAR_ID:-d_cd4f91f7a1ebb2b7ceb1a70c0dbb706d}" >> "$GITHUB_STEP_SUMMARY"
           echo "- Changed: ${{ steps.diff.outputs.changed }}" >> "$GITHUB_STEP_SUMMARY"
           echo "- Run: ${{ github.run_id }}" >> "$GITHUB_STEP_SUMMARY"

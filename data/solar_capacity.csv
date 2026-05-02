@@ -1,0 +1,12 @@
+year,installed_capacity_mwp,pct_of_3gwp_target,estimated,source
+2016,128,4.3,False,Sunollo embedded (EMA Singapore Energy Statistics)
+2017,183,6.1,False,Sunollo embedded (EMA Singapore Energy Statistics)
+2018,252,8.4,False,Sunollo embedded (EMA Singapore Energy Statistics)
+2019,363,12.1,False,Sunollo embedded (EMA Singapore Energy Statistics)
+2020,447,14.9,False,Sunollo embedded (EMA Singapore Energy Statistics)
+2021,572,19.1,False,Sunollo embedded (EMA Singapore Energy Statistics)
+2022,782,26.1,False,Sunollo embedded (EMA Singapore Energy Statistics)
+2023,1026,34.2,False,Sunollo embedded (EMA Singapore Energy Statistics)
+2024,1330,44.3,False,Sunollo embedded (EMA Singapore Energy Statistics)
+2025,1700,56.7,True,Sunollo embedded (EMA Singapore Energy Statistics)
+2026,2050,68.3,True,Sunollo embedded (EMA Singapore Energy Statistics)
